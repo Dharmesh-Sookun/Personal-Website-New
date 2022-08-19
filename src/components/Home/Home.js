@@ -15,18 +15,34 @@ function Home() {
         I'm a passionate <span>Software Engineer</span> from Mauritius
       </p>
       <div className="icons">
-        <span>
+        <a
+          href="https://twitter.com/SookunDharmesh"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <FontAwesomeIcon icon={['fab', 'twitter']} />
-        </span>
-        <span>
+        </a>
+        <a
+          href="https://www.facebook.com/DharmeshSookun"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <FontAwesomeIcon icon={['fab', 'facebook']} />
-        </span>
-        <span>
+        </a>
+        <a
+          href="https://www.instagram.com/dharmeshsookun/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <FontAwesomeIcon icon={['fab', 'instagram']} />
-        </span>
-        <span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/dharmesh-sookun-36ba58133/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <FontAwesomeIcon icon={['fab', 'linkedin']} />
-        </span>
+        </a>
       </div>
     </div>
   );

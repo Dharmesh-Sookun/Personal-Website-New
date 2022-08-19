@@ -2,11 +2,16 @@
   margin-bottom: 2em;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0 2.5rem;
   font-size: 1.2rem;
-  font-family: 'Poppins', sans-serif;;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navigation h1{
+  font-weight: 700;
 }
 
 .navigation ul{
@@ -28,4 +33,10 @@
   color: white;
   border-bottom: 2px solid rgb(9, 233, 9);
   padding-bottom: 6px;
+}
+
+.logo{  
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
 }

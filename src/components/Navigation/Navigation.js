@@ -6,6 +6,11 @@ import './Navigation.css';
 function Navigation() {
   return (
     <div className="navigation">
+      <h3>
+        <Link className="logo" to="/">
+          Dharmesh Kumar Sookun
+        </Link>
+      </h3>
       <ul>
         <li>
           <Link className="nav-links" to="/">
