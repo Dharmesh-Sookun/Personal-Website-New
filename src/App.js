@@ -7,6 +7,7 @@ import './App.css';
 import Navigation from './components/Navigation/Navigation';
 import About from './components/About/About';
 import Home from './components/Home/Home';
+import Resume from './components/Resume/Resume';
 
 library.add(fab, fas);
 
@@ -17,6 +18,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </Router>
