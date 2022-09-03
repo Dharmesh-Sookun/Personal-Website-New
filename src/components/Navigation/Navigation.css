@@ -29,10 +29,12 @@
   text-decoration: none;
 }
 
-.nav-links:hover{
+.nav-links:hover, .active-nav-links{
   color: white;
   border-bottom: 2px solid rgb(9, 233, 9);
   padding-bottom: 6px;
+  text-decoration: none;
+  text-decoration: none;
 }
 
 .logo{  
