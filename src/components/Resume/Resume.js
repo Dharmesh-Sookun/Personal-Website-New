@@ -32,6 +32,44 @@ function Resume() {
               <li>Works with .NET framework</li>
             </ul>
           </div>
+          <h3>Professional Certifications</h3>
+          <div className="item">
+            <h4>Microsoft Azure Fundamentals (AZ-900)</h4>
+            <h5>2021</h5>
+            <p>
+              <em>
+                Foundational level knowledge of cloud services and how those
+                services <br /> are provided with Microsoft Azure.
+              </em>
+            </p>
+            <a
+              href="https://www.credly.com/badges/4adb3be6-7194-4808-8b60-8fcc1cfc672e"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              View here
+            </a>
+          </div>
+          <div className="item">
+            <h4>IBM Artificial Intelligence Analyst - Mastery Award 2019</h4>
+            <h5>2020</h5>
+            <p>
+              <em>
+                Knowledge on how to apply machine learning algorithms and build{' '}
+                <br />
+                AI solutions by using IBM Watson.
+              </em>
+            </p>
+            <a
+              href="https://www.credly.com/badges/600f8bd4-44f2-48ef-ba7a-59e3b8355dca"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              View here
+            </a>
+          </div>
+        </div>
+        <div>
           <h3>Tertiary Education</h3>
           <div className="item">
             <h4>Bsc (Hons) Software Engineering</h4>
@@ -46,8 +84,6 @@ function Resume() {
               <li>Learnt about Agile Software Development</li>
             </ul>
           </div>
-        </div>
-        <div>
           <h3>Secondary Education</h3>
           <div className="item">
             <h4>GCE A - Level</h4>
@@ -69,14 +105,6 @@ function Resume() {
             <p>
               Studied Mathematics English, French, Physics, Chemistry, Biology
               <br /> and Additional Mathemeatics
-            </p>
-          </div>
-          <h3>Primary Education</h3>
-          <div className="item">
-            <h4>CPE</h4>
-            <h5>2010</h5>
-            <p>
-              <em>Riviere du Poste Government School</em>
             </p>
           </div>
         </div>

@@ -62,7 +62,7 @@
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: rgb(9, 233, 9);
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .resume .item h5{
@@ -75,7 +75,7 @@
 }
 
 .resume .item p{
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .resume .item ul{
@@ -95,4 +95,15 @@
 
 .resume-items-container div{
   margin-right: 1rem;
+}
+
+.resume-items-container .item a{
+  display: block;
+  text-decoration: none;
+  background: rgb(9, 233, 9);
+  padding: 0.5rem;
+  width: 25%;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0.1rem;
 }
