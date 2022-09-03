@@ -1,0 +1,110 @@
+.contact{
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 75vw;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact h1{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.header h2{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.green-border{
+  margin-left: 0.5rem;
+  width: 8em;
+  height: 0.15rem;
+  background-color: rgb(9, 233, 9);
+}
+
+.contact-details{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2rem;
+  margin: 1rem 0;
+}
+
+.contact-form{
+  width: 100%;
+}
+
+.contact-form form{
+  padding: 1.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grid{
+  display: grid;
+  grid-template-areas:  
+  'name email'
+  'subject subject'
+  'message message';
+  grid-gap: 2rem;
+}
+
+.name{
+  grid-area: name;
+}
+
+.email{
+  grid-area: email;
+}
+
+.subject{
+  grid-area: subject;
+}
+
+.message{
+  grid-area: message;
+}
+
+.contact-form form input, .contact-form form textarea{
+  padding: 0.63rem 0.94rem;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0;
+  transition: 0.3s;
+  color: #fff;
+  outline: none;
+  display: inline-block;
+  margin: 0;
+}
+
+.contact-form form input:focus, .contact-form form textarea:focus{
+  background: rgba(255, 255, 255, 0.199);
+}
+
+.submit{
+  background: rgb(9, 233, 9);
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  margin: 1rem auto;
+}
+
+.submit:hover{
+  background: rgb(6, 165, 6);
+  cursor: pointer;
+}

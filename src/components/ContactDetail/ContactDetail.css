@@ -1,0 +1,41 @@
+.contact-detail{
+  color: #444444;
+  padding: 1.25rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+}
+
+.contact-detail h3{
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+
+.contact-detail p{
+  padding: 0;
+  color: #fff;
+  line-height: 1.5rem;
+  font-size: 0.88rem;
+}
+
+.contact-detail span{
+  font-size: 2rem;
+  color: rgb(9, 233, 9);
+  margin: 0.5rem;
+}
+
+.contact-info{
+  margin-left: 0.8rem;
+}
+
+.social-icon{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 0.3rem;
+}
+
+.social-icon:hover{
+  color: rgb(9, 233, 9);
+}

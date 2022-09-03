@@ -5,9 +5,10 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 import Navigation from './components/Navigation/Navigation';
-import About from './components/About/About';
 import Home from './components/Home/Home';
+import About from './components/About/About';
 import Resume from './components/Resume/Resume';
+import Contact from './components/Contact/Contact';
 
 library.add(fab, fas);
 
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </Router>
