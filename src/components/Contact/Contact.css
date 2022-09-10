@@ -108,3 +108,11 @@
   background: rgb(6, 165, 6);
   cursor: pointer;
 }
+
+.submit:disabled, .submit[disabled]{
+  background: rgba(4, 102, 4, 0.5);
+}
+
+.submit:disabled:hover, .submit[disabled]:hover{
+  cursor: progress;
+}

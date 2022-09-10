@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 
 import './Contact.css';
 import ContactDetail from '../ContactDetail/ContactDetail';
+import Alert from '../Alert/Alert';
 
 const socialContacts = [
   {
@@ -27,8 +29,71 @@ const socialContacts = [
 ];
 
 function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [sendEmailBtnText, setSendEmailBtnText] = useState('Send Email');
+  const [disabled, setDisabled] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const [showErrorAlert, setShowErrorAlert] = useState(false);
+
+  const clearForm = () => {
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setDisabled(true);
+    setSendEmailBtnText('Sending email...');
+    const emailObj = { name, email, subject, message };
+    axios
+      .post('http://localhost:5000', emailObj)
+      .then(({ data }) => {
+        setShowAlert(true);
+        if (data.sent) {
+          setShowSuccessAlert(true);
+          setDisabled(false);
+          setSendEmailBtnText('Send Email');
+          clearForm();
+        } else {
+          setShowErrorAlert(true);
+          clearForm();
+        }
+        setTimeout(() => {
+          setShowAlert(false);
+          setShowSuccessAlert(false);
+          setShowErrorAlert(false);
+        }, 5000);
+      })
+      .catch((e) => {
+        setShowErrorAlert(true);
+        clearForm();
+        setTimeout(() => {
+          setShowAlert(false);
+          setShowSuccessAlert(false);
+          setShowErrorAlert(false);
+        }, 5000);
+      });
+  };
+
   return (
     <div>
+      {showAlert ? (
+        showSuccessAlert ? (
+          <Alert type="success" message="Email sent" />
+        ) : showErrorAlert ? (
+          <Alert type="error" message="Email not sent" />
+        ) : (
+          ''
+        )
+      ) : (
+        ''
+      )}
       <div className="contact">
         <div className="header">
           <h2>Contact</h2>
@@ -67,35 +132,41 @@ function Contact() {
               <input
                 className="name"
                 type="text"
-                value=""
-                onChange=""
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Name"
               />
               <input
                 className="email"
                 type="email"
-                value=""
-                onChange=""
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your Email"
               />
               <input
                 className="subject"
                 type="text"
-                value=""
-                onChange=""
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
                 placeholder="Subject"
               />
               <textarea
                 className="message"
                 type="textarea"
-                value=""
-                onChange=""
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder="Message"
                 rows="5"
               ></textarea>
             </div>
-            <button className="submit" type="submit">
-              Send Message
+            <button
+              id="submitBtn"
+              className="submit"
+              type="submit"
+              onClick={sendEmail}
+              disabled={disabled}
+            >
+              {sendEmailBtnText}
             </button>
           </form>
         </div>
