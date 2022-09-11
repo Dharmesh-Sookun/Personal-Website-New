@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './Home.css';
-import User from '../../images/home-img.jpg';
+import User from '../../images/profile-picture.jpg';
 
 function Home() {
   return (

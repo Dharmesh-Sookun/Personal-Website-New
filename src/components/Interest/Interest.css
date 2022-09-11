@@ -2,11 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
+  font-size: 0.9rem;
 }
 
 .interest span{
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
