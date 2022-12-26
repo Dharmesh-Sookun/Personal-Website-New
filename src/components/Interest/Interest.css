@@ -1,7 +1,6 @@
 .interest{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
@@ -10,4 +9,9 @@
 
 .interest span{
   font-size: 1.5rem;
+}
+
+.interest p{
+  display: flex;
+  align-items: center;
 }
