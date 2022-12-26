@@ -4,6 +4,7 @@
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
   display: flex;
+  overflow-x: hidden;
 }
 
 .contact-detail h3{
@@ -39,4 +40,29 @@
 
 .social-icon:hover{
   color: rgb(9, 233, 9);
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact-detail h3{
+    font-size: 1.15rem;
+  }
+
+  .social-icon{
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .contact-detail{
+    padding: 1rem;
+  }
+  .contact-detail p{
+    line-height: 0.75rem;
+    font-size: 0.75rem;
+    word-wrap: break-word;
+  }
+
+  .social-icon{
+    font-size: 0.75rem;
+  }
 }

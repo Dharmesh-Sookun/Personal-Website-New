@@ -117,3 +117,31 @@
 .submit:disabled:hover, .submit[disabled]:hover{
   cursor: progress;
 }
+
+@media only screen and (max-width: 1000px) {
+  .contact{
+    width: 100%;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .contact h1 {
+    font-size: 1.75em;
+  }
+
+  .contact-details{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .form-grid{
+    grid-template-areas:  
+    'name name'
+    'email email'
+    'subject subject'
+    'message message';
+    grid-gap: 1rem;
+  }
+}
