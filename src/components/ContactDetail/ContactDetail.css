@@ -53,6 +53,9 @@
 }
 
 @media only screen and (max-width: 430px) {
+  .contact-detail h3{
+    font-size: 1rem;
+  }
   .contact-detail{
     padding: 1rem;
   }
@@ -63,6 +66,10 @@
   }
 
   .social-icon{
-    font-size: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .contact-detail span{
+    font-size: 1.25rem;
   }
 }
