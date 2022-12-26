@@ -81,10 +81,6 @@
 }
 
 @media only screen and (max-width: 445px) {
-  .photo-container{
-    width: 150px;
-    height: 150px;
-  }
   .name{
     font-size: 1em;
   }
@@ -102,11 +98,6 @@
 }
 
 @media only screen and (max-width: 380px) {
-  .photo-container{
-    width: 100px;
-    height: 100px;
-  }
-
   .name{
     font-size: 0.60em;
   }

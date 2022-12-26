@@ -139,5 +139,9 @@
   .resume-items-container .item a{
     width: 40%;
   }
+
+  .resume-items-container .item h4{
+    font-size: 1rem;
+  }
   
 }
