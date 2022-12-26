@@ -66,3 +66,59 @@
   cursor: pointer;
   color: rgb(9, 233, 9);
 }
+
+@media only screen and (max-width: 750px) {
+  .name{
+    font-size: 1.5em;
+  }
+  .info{
+    font-size: 1.15em;
+  }
+
+  .info span{
+    font-size: inherit;
+  }
+}
+
+@media only screen and (max-width: 445px) {
+  .photo-container{
+    width: 150px;
+    height: 150px;
+  }
+  .name{
+    font-size: 1em;
+  }
+  .info{
+    font-size: 1em;
+  }
+
+  .info span{
+    font-size: inherit;
+  }
+
+  .icons a{
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .photo-container{
+    width: 100px;
+    height: 100px;
+  }
+
+  .name{
+    font-size: 0.60em;
+  }
+  .info{
+    font-size: 0.60em;
+  }
+
+  .info span{
+    font-size: inherit;
+  }
+
+  .icons a{
+    font-size: 0.75rem;
+  }
+}

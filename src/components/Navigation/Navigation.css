@@ -146,3 +146,9 @@
     font-size: 1rem;
   }
 }
+
+@media only screen and (max-width: 445px) {
+  .active-nav-links, .nav-links {
+    font-size: 0.75em;
+  }
+}
