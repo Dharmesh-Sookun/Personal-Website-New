@@ -8,10 +8,14 @@ function Navigation() {
     <div className="navigation">
       <h3>
         <Link className="logo" to="/">
-          Dharmesh Kumar Sookun
+          D K Sookun
         </Link>
       </h3>
-      <ul>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul className="menu">
         <li>
           <Link
             className={
