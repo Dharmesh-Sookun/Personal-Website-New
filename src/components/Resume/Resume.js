@@ -14,15 +14,50 @@ function Resume() {
         <div>
           <h3>Professional Experience</h3>
           <div className="item">
-            <h4>Software Developer</h4>
-            <h5>2021 - Present</h5>
+            <h4>Software Developer - UK Payroll</h4>
+            <h5>Dec 2022 - Present</h5>
             <p>
               <em>Ceridian Mauritius Ltd</em>
             </p>
             <ul>
               <li>
-                Involve in developing Payroll functionalities for Mauritian
-                clients
+                Involve in developing Payroll functionalities for UK clients
+              </li>
+              <li>Involve in development, unit testing, automation testing</li>
+              <li>
+                Involve development (frontend & backend), unit testing,
+                automation testing
+              </li>
+              <li>Works with .NET framework</li>
+            </ul>
+          </div>
+          <div className="item">
+            <h4>Software Developer - MAU Payroll</h4>
+            <h5>May 2022 - Dec 2022</h5>
+            <p>
+              <em>Ceridian Mauritius Ltd</em>
+            </p>
+            <ul>
+              <li>
+                Involve in developing Payroll functionalities for MAU clients
+              </li>
+              <li>Involve in development, unit testing, automation testing</li>
+              <li>
+                Involve development (frontend & backend), unit testing,
+                automation testing
+              </li>
+              <li>Works with .NET framework</li>
+            </ul>
+          </div>
+          <div className="item">
+            <h4>Assoc Software Developer - MAU Payroll</h4>
+            <h5>Sept 2021 - May 2022</h5>
+            <p>
+              <em>Ceridian Mauritius Ltd</em>
+            </p>
+            <ul>
+              <li>
+                Involve in developing Payroll functionalities for MAU clients
               </li>
               <li>Involve in development, unit testing, automation testing</li>
               <li>
@@ -33,6 +68,25 @@ function Resume() {
             </ul>
           </div>
           <h3>Professional Certifications</h3>
+          <div className="item">
+            <h4>Microsoft Data Fundamentals (DP-900)</h4>
+            <h5>2022</h5>
+            <p>
+              <em>
+                Solid understanding of core data concepts, such as relational
+                data, nonrelational <br /> data, big data, and analytics. Plus,
+                familiarity with the roles, tasks, and <br /> responsibilities
+                in the world of data and data analytics.
+              </em>
+            </p>
+            <a
+              href="https://www.credly.com/badges/e6f35f2c-e00d-4164-b2ca-0cf0f30559ed/public_url"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              View here
+            </a>
+          </div>
           <div className="item">
             <h4>Microsoft Azure Fundamentals (AZ-900)</h4>
             <h5>2021</h5>

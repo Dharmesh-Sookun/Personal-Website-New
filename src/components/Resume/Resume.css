@@ -76,6 +76,7 @@
 
 .resume .item p{
   margin-bottom: 0.5rem;
+  text-align: justify;
 }
 
 .resume .item ul{
@@ -106,4 +107,37 @@
   color: #fff;
   text-align: center;
   margin-bottom: 0.1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .resume-items-container{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .resume, .resume-items-container{
+    width: 100%;
+  }
+
+  .resume h1{
+    font-size: 1.75em;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .resume {
+    font-size: 14px;
+  }
+
+  .resume h1{
+    font-size: 1.65em;
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  .resume-items-container .item a{
+    width: 40%;
+  }
+  
 }
