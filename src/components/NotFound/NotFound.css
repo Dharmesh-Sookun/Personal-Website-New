@@ -1,0 +1,36 @@
+.notFound{
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 0;
+  font-family: 'Poppins';
+}
+
+.notFound h1{
+  text-transform: uppercase;
+  line-height: 2rem;
+  margin: 1.5rem 0;
+}
+
+.notFound p{
+  line-height: 2rem;
+}
+
+.notFound-link{
+  color: white;
+  cursor: pointer;
+}
+
+.notFound-link:hover{
+  color: rgb(9, 233, 9);
+}
+
+@media only screen and (max-width: 400px){
+  .notFound h1{
+    font-size: 24px;
+  }
+}
