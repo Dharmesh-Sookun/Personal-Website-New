@@ -38,6 +38,7 @@ function Contact() {
   const [showAlert, setShowAlert] = useState(false);
   const [showSuccessAlert, setShowSuccessAlert] = useState(false);
   const [showErrorAlert, setShowErrorAlert] = useState(false);
+  const [validationMessage, setValidationMessage] = useState(null);
 
   const clearForm = () => {
     setName('');
@@ -48,37 +49,81 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setDisabled(true);
-    setSendEmailBtnText('Sending email...');
     const emailObj = { name, email, subject, message };
-    axios
-      .post('http://localhost:5000', emailObj)
-      .then(({ data }) => {
-        setShowAlert(true);
-        if (data.sent) {
-          setShowSuccessAlert(true);
-          setDisabled(false);
-          setSendEmailBtnText('Send Email');
-          clearForm();
-        } else {
+    const validationResult = validateInput(emailObj);
+    if (validationResult) {
+      setValidationMessage(validationResult);
+      setShowAlert(true);
+      setShowErrorAlert(true);
+      setTimeout(() => {
+        setShowAlert(false);
+        setShowErrorAlert(false);
+      }, 5000);
+    } else {
+      setValidationMessage(null);
+      setDisabled(true);
+      setSendEmailBtnText('Sending email...');
+      axios
+        .post('http://localhost:5000', emailObj)
+        .then(({ data }) => {
+          setShowAlert(true);
+          if (data.sent) {
+            setShowSuccessAlert(true);
+            setDisabled(false);
+            setSendEmailBtnText('Send Email');
+            clearForm();
+          } else {
+            setShowErrorAlert(true);
+            clearForm();
+          }
+          setTimeout(() => {
+            setShowAlert(false);
+            setShowSuccessAlert(false);
+            setShowErrorAlert(false);
+          }, 5000);
+        })
+        .catch((e) => {
           setShowErrorAlert(true);
           clearForm();
-        }
-        setTimeout(() => {
-          setShowAlert(false);
-          setShowSuccessAlert(false);
-          setShowErrorAlert(false);
-        }, 5000);
-      })
-      .catch((e) => {
+          setTimeout(() => {
+            setShowAlert(false);
+            setShowSuccessAlert(false);
+            setShowErrorAlert(false);
+          }, 5000);
+        });
+      setTimeout(() => {
+        setShowAlert(true);
         setShowErrorAlert(true);
-        clearForm();
-        setTimeout(() => {
-          setShowAlert(false);
-          setShowSuccessAlert(false);
-          setShowErrorAlert(false);
-        }, 5000);
-      });
+        setDisabled(false);
+        setSendEmailBtnText('Send Email');
+      }, 15000);
+      setTimeout(() => {
+        setShowAlert(false);
+        setShowErrorAlert(false);
+      }, 20000);
+    }
+  };
+
+  const validateInput = (emailObj) => {
+    if (
+      !emailObj.name ||
+      emailObj.name == '' ||
+      !emailObj.email ||
+      emailObj.email == '' ||
+      !emailObj.subject ||
+      emailObj.subject == '' ||
+      !emailObj.message ||
+      emailObj.message == ''
+    ) {
+      return 'Name, email, subject and message are required fields';
+    }
+    if (
+      !emailObj.email.match(
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      )
+    ) {
+      return 'Email address is not valid';
+    }
   };
 
   return (
@@ -87,13 +132,18 @@ function Contact() {
         showSuccessAlert ? (
           <Alert type="success" message="Email sent" />
         ) : showErrorAlert ? (
-          <Alert type="error" message="Email not sent" />
+          validationMessage ? (
+            <Alert type="error" message={validationMessage} />
+          ) : (
+            <Alert type="error" message="Email not sent" />
+          )
         ) : (
-          ''
+          <Alert type="error" message="Email not sent" />
         )
       ) : (
         ''
       )}
+      : ''
       <div className="contact">
         <div className="header">
           <h2>Contact</h2>
