@@ -110,16 +110,16 @@
 }
 
 @media only screen and (max-width: 1000px) {
+  .resume, .resume-items-container{
+    width: 100%;
+  }
+  
   .resume-items-container{
     flex-direction: column;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  .resume, .resume-items-container{
-    width: 100%;
-  }
-
   .resume h1{
     font-size: 1.75em;
   }

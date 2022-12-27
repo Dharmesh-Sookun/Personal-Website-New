@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './About.css';
-import UserImg from '../../images/profile-picture.jpg';
+import UserImg from '../../images/profile-picture.png';
 import Skill from '../Skill/Skill';
 import Interest from '../Interest/Interest';
 
@@ -123,10 +123,10 @@ function About() {
           iconColor="#FBDF07"
         ></Interest>
         <Interest
-          name="Emotional Intelligence"
+          name="IoT"
           iconType="fas"
-          iconName="heart"
-          iconColor="red"
+          iconName="cloud-arrow-up"
+          iconColor="#ECE8DD"
         ></Interest>
         <Interest
           name="Computer Vision"

@@ -5,12 +5,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .photo-container{
-  width: 200px;
-  height: 200px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   border-top: 6px solid rgb(9, 233, 9);
    border-right: 6px solid rgba(9, 233, 9, 0); 
@@ -67,7 +67,19 @@
   color: rgb(9, 233, 9);
 }
 
+@media only screen and (max-height: 650px) {
+  .photo-container{
+    width: 185px;
+    height: 185px;
+  }
+}
+
 @media only screen and (max-width: 750px) {
+  .photo-container{
+    width: 195px;
+    height: 195px;
+  }
+
   .name{
     font-size: 1.5em;
   }

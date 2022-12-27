@@ -145,3 +145,15 @@
     grid-gap: 1rem;
   }
 }
+
+@media only screen and (max-width: 300px) {
+  .contact-form form{
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .contact-form form input, .contact-form form textarea{
+    padding: 0.3rem 0.4rem;
+    font-size: 12px;
+  }
+}

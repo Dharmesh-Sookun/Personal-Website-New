@@ -148,6 +148,9 @@
 }
 
 @media only screen and (max-width: 445px) {
+  .about h1 {
+    font-size: 1.75em;
+  }
   .active-nav-links, .nav-links {
     font-size: 0.75em;
   }

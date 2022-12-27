@@ -23,7 +23,7 @@
 .header{
   display: flex;
   align-items: center;
-  margin-bottom: 1.2rem;
+  margin: 1.5rem 0;
 }
 
 .green-border{
@@ -127,7 +127,7 @@
 
 @media only screen and (max-width: 1000px) {
   .about {
-    width: 95vw;
+    width: 100vw;
   }
 
   .about h1 {
@@ -200,7 +200,7 @@
   }
 
   .about h1 {
-    transform: scale(70%);
+    font-size: 1.5em;
   }
 
   .skills-grid, .interest-grid{
@@ -211,5 +211,16 @@
 @keyframes spin {
   100% {
       transform: rotate(1turn);
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .about h1 {
+    font-size: 1.35em;
+  }
+
+  .about-info h3{
+    letter-spacing: 1px;
+    font-size: 1rem;
   }
 }
