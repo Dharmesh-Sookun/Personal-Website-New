@@ -1,5 +1,4 @@
 .navigation{
-  margin-bottom: 2em;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -153,5 +152,11 @@
   }
   .active-nav-links, .nav-links {
     font-size: 0.75em;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .navigation{
+    margin-bottom: 1rem;
   }
 }

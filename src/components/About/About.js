@@ -41,7 +41,8 @@ function About() {
             <div className="website">
               <p>
                 <span className="grid-icon">&gt; </span>
-                <span className="grid-info-name">Website:</span> www.xyz.com
+                <span className="grid-info-name">Website:</span>{' '}
+                www.dharmesh-sookun.dev
               </p>
             </div>
             <div className="degree">
