@@ -64,7 +64,10 @@ function Contact() {
       setDisabled(true);
       setSendEmailBtnText('Sending email...');
       axios
-        .post('http://localhost:5000', emailObj)
+        .post(
+          'https://personal-website-mail-server-production.up.railway.app/',
+          emailObj
+        )
         .then(({ data }) => {
           setShowAlert(true);
           if (data.sent) {
@@ -96,11 +99,11 @@ function Contact() {
         setShowErrorAlert(true);
         setDisabled(false);
         setSendEmailBtnText('Send Email');
-      }, 15000);
+      }, 40000);
       setTimeout(() => {
         setShowAlert(false);
         setShowErrorAlert(false);
-      }, 20000);
+      }, 45000);
     }
   };
 
