@@ -64,10 +64,7 @@ function Contact() {
       setDisabled(true);
       setSendEmailBtnText('Sending email...');
       axios
-        .post(
-          'https://personal-website-mail-server-production.up.railway.app/',
-          emailObj
-        )
+        .post('https://personal-website-mail-server.cyclic.app/', emailObj)
         .then(({ data }) => {
           setShowAlert(true);
           if (data.sent) {
