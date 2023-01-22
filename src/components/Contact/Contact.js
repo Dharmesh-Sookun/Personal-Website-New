@@ -146,7 +146,6 @@ function Contact() {
       ) : (
         ''
       )}
-      : ''
       <div className="contact">
         <div className="header">
           <h2>Contact</h2>
