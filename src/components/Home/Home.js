@@ -8,7 +8,11 @@ function Home() {
   return (
     <div className="home">
       <div className="photo-container">
-        <img src={User} className="photo" />
+        <img
+          src={User}
+          alt="Dharmesh Kumar Sookun Profile Picture"
+          className="photo"
+        />
       </div>
       <h1 className="name">Dharmesh Kumar Sookun</h1>
       <p className="info">

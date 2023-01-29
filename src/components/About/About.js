@@ -15,7 +15,7 @@ function About() {
       <h1>Learn more about me</h1>
       <div className="info-container">
         <div className="image">
-          <img src={UserImg} />
+          <img src={UserImg} alt="Dharmesh Kumar Sookun Picture" />
         </div>
         <div className="about-info">
           <h3>Software Engineer</h3>
@@ -42,7 +42,13 @@ function About() {
               <p>
                 <span className="grid-icon">&gt; </span>
                 <span className="grid-info-name">Website:</span>{' '}
-                www.dharmesh-sookun.dev
+                <a
+                  href="www.dharmesh-sookun.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  www.dharmesh-sookun.dev
+                </a>
               </p>
             </div>
             <div className="degree">
@@ -55,14 +61,20 @@ function About() {
             <div className="phone">
               <p>
                 <span className="grid-icon">&gt; </span>
-                <span className="grid-info-name">Phone:</span> 58108134/55086689
+                <span className="grid-info-name">Phone:</span>
+                <span className="phone-number">
+                  <a href="tel:+23058108134">58108134</a>/
+                  <a href="tel:+23055086689">55086689</a>
+                </span>
               </p>
             </div>
             <div className="email">
               <p>
                 <span className="grid-icon">&gt; </span>
                 <span className="grid-info-name">Email:</span>{' '}
-                sookundharmesh2906@gmail.com
+                <a href="mailto:sookundharmesh2906@gmail.com">
+                  sookundharmesh2906@gmail.com
+                </a>
               </p>
             </div>
             <div className="city">
