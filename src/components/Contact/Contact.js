@@ -26,6 +26,11 @@ const socialContacts = [
     iconName: 'linkedin',
     url: 'https://www.linkedin.com/in/dharmesh-sookun-36ba58133/',
   },
+  {
+    iconType: 'fab',
+    iconName: 'github',
+    url: 'https://github.com/Dharmesh-Sookun',
+  },
 ];
 
 function Contact() {

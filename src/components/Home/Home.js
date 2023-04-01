@@ -47,6 +47,13 @@ function Home() {
         >
           <FontAwesomeIcon icon={['fab', 'linkedin']} />
         </a>
+        <a
+          href="https://github.com/Dharmesh-Sookun"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FontAwesomeIcon icon={['fab', 'github']} />
+        </a>
       </div>
     </div>
   );
